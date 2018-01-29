@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_change"
+        android:layout_marginLeft="@dimen/x30"
+        android:layout_marginRight="@dimen/x30"
+        android:layout_marginTop="@dimen/x60"
+        android:background="@drawable/ellips_button_selector"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y120">
+
+        <TextView
+            android:textSize="@dimen/x45"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/x20"
+            android:textColor="@color/white"
+            android:text="继续更换" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_repair"
+        android:layout_marginTop="@dimen/y30"
+        android:layout_marginRight="@dimen/x30"
+        android:layout_marginLeft="@dimen/x30"
+        android:background="@drawable/ellips_button_selector"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y120">
+
+        <TextView
+            android:textSize="@dimen/x45"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/x20"
+            android:textColor="@color/white"
+            android:text="继续维修" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_cancel"
+        android:layout_marginTop="@dimen/y30"
+        android:layout_marginBottom="@dimen/y30"
+        android:layout_marginRight="@dimen/x30"
+        android:layout_marginLeft="@dimen/x30"
+        android:background="@drawable/ellips_button_gray_selector"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y120">
+
+        <TextView
+            android:textSize="@dimen/x45"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/x20"
+            android:textColor="@color/white"
+            android:text="取消" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

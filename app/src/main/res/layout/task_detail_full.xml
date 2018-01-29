@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.yb.hstt.View.SildingFinishLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sfl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/ll_popupwindow_basemenu_deal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_below="@+id/task_status_first_toolbar"
+            android:id="@+id/ll_title_pop"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y150"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginRight="@dimen/x20"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:textColor="@color/tv_text_black"
+                android:textSize="@dimen/x48"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="工单信息" />
+
+            <TextView
+                android:textSize="@dimen/x36"
+                android:id="@+id/tv_last_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="剩余时间:"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:layout_marginLeft="@dimen/x15"
+                android:textSize="@dimen/x42"
+                android:id="@+id/tv_left_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00:00"
+                android:textColor="@color/blue_submit" />
+        </LinearLayout>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/task_status_first_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue_submit">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="我的工单"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x54" />
+
+        </android.support.v7.widget.Toolbar>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/rl_need_to_hide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_below="@id/ll_title_pop">
+
+            <View
+                android:id="@+id/divide_a"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="@dimen/y10"
+                android:background="@color/divider_color" />
+
+            <include layout="@layout/task_info"/>
+
+            <View
+                android:visibility="gone"
+                android:id="@+id/divide_c"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@id/ll_contract_info"
+                android:layout_marginTop="@dimen/y30"
+                android:background="@color/divide_gray" />
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_marginLeft="@dimen/x45"
+                android:layout_marginRight="@dimen/x45"
+                android:layout_marginTop="@dimen/y21"
+                android:id="@+id/rv_info_pic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divide_c" />
+            <View
+                android:id="@+id/view_kong"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <RelativeLayout
+                style="@style/mainButton_ll_style">
+
+                <Button
+                    style="@style/mainButton_bt_style"
+                    android:id="@+id/tv_start_deal"
+                    android:text="开始处理" />
+
+                <Button
+                    android:id="@+id/bt_more"
+                    android:text="•••"
+                    style="@style/mainButton_more_style"
+                    android:layout_toRightOf="@+id/tv_start_deal"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</com.example.yb.hstt.View.SildingFinishLayout>

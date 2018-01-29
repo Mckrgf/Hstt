@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_task_status_fourth"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_submit"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.example.yb.hstt.UI.Activities.Tasklist.TaskStatusFourthActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/task_status_third_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_submit">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="采证完成"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x54" />
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_above="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/task_status_third_toolbar"
+        android:background="@color/activity_background">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/activity_background">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/x30">
+                <!--旧设备处理-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y30"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/y120"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/x15"
+                        android:paddingRight="@dimen/x30"
+                        android:text="现场采证"
+                        android:textColor="@color/tv_text_black"
+                        android:textSize="@dimen/x48"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/y30"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/x2"
+                            android:background="@color/dividing_color" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/x15"
+                            android:layout_marginTop="@dimen/y30"
+                            android:text="输入的文字"
+                            android:textColor="@color/tv_text_gray"
+                            android:textSize="@dimen/x42" />
+
+
+                        <EditText
+                            android:id="@+id/et_reason"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/y180"
+                            android:layout_marginLeft="@dimen/x30"
+                            android:layout_marginRight="@dimen/x30"
+                            android:layout_marginTop="@dimen/y15"
+                            android:background="@null"
+                            android:gravity="left"
+                            android:minLines="2"
+                            android:textColor="@color/tv_text_black"
+                            android:textSize="@dimen/x45" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_photos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/x15"
+                            android:layout_marginRight="@dimen/x15"
+                            android:layout_marginTop="@dimen/y21"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_pic"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="添加的照片"
+                                android:textColor="@color/tv_text_gray"
+                                android:textSize="@dimen/x42" />
+
+                            <TextView
+                                android:id="@+id/tv_pic_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/x36"
+                                android:layout_toRightOf="@+id/tv_pic"
+                                android:text="2017.09.11"
+                                android:textColor="@color/tv_text_gray"
+                                android:textSize="@dimen/x42"
+                                android:visibility="gone" />
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/rv_photos"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_pic"
+                                android:layout_marginTop="@dimen/y30" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_videos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/x15"
+                            android:layout_marginRight="@dimen/x15"
+                            android:layout_marginTop="@dimen/y21"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_video"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="添加的视频"
+                                android:textColor="@color/tv_text_gray"
+                                android:textSize="@dimen/x42" />
+
+                            <TextView
+                                android:id="@+id/tv_video_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/x36"
+                                android:layout_toRightOf="@+id/tv_video"
+                                android:text="2017.09.11"
+                                android:textColor="@color/tv_text_gray"
+                                android:textSize="@dimen/x42"
+                                android:visibility="gone" />
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/rv_videos"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_video"
+                                android:layout_marginTop="@dimen/y30" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y30"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_marginRight="@dimen/x20"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/x20"
+                            android:text="工单信息-紧急"
+                            android:textColor="@color/tv_text_black"
+                            android:textSize="@dimen/x48"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:layout_marginTop="@dimen/x20"
+                            android:background="@color/divider_color" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_need_to_hide"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:id="@+id/divide_a"
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:layout_marginTop="@dimen/y10"
+                            android:background="@color/divider_color" />
+
+                        <include layout="@layout/task_info"
+                            android:id="@+id/task_info"
+                            android:layout_below="@+id/divide_a"/>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rv_info_pic"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/task_info" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y235"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+
+            style="@style/mainButton_ll_style"
+            android:id="@+id/rl_deal">
+
+            <Button
+                android:id="@+id/bt_next"
+                android:text="继续处理"
+                style="@style/mainButton_bt_style"/>
+
+            <Button
+                android:layout_toRightOf="@+id/bt_next"
+                android:id="@+id/bt_more"
+                android:text="•••"
+                style="@style/mainButton_more_style"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/v_trans"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_trans"
+        android:visibility="gone" />
+
+</RelativeLayout>

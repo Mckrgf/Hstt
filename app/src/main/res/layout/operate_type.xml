@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:minHeight="@dimen/y816"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y150">
+        <TextView
+            android:id="@+id/tv_dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y150"
+            android:background="@color/blue_submit"
+            android:text="操作类型"
+            android:gravity="center"
+            android:textSize="@dimen/x48"
+            android:textColor="@color/white"/>
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/iv_close"
+            android:layout_margin="@dimen/x15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_close"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <RadioGroup
+            android:id="@+id/rg_operate_type"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </RadioGroup>
+    </ScrollView>
+
+
+    <Button
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/y45"
+        android:id="@+id/bt_operate_save"
+        android:layout_width="@dimen/x420"
+        android:layout_height="@dimen/y120"
+        android:background="@drawable/ellips_button_selector"
+        android:text="保存"
+        android:layout_marginBottom="@dimen/y45"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/x42" />
+
+</LinearLayout>

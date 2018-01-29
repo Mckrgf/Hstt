@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/x30"
+    android:paddingRight="@dimen/x30"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_workTimeLine1_time"
+            android:layout_width="@dimen/x120"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="right"
+            android:text="09-24 12:42"
+            android:textColor="@color/tv_text_gray"
+            android:textSize="@dimen/x42" />
+
+        <LinearLayout
+            android:id="@+id/ll_workingTimeLine1_line"
+            android:layout_width="@dimen/x60"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/x24"
+            android:layout_toRightOf="@+id/tv_workTimeLine1_time"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_workTimeLine1_lingLog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_timeline_arrow" />
+
+            <View
+                android:id="@+id/v_workTimeLine1_ling"
+                android:layout_width="@dimen/x2"
+                android:layout_height="match_parent"
+                android:background="@color/dividing_color"></View>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="@dimen/y90"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_toRightOf="@+id/ll_workingTimeLine1_line"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_workTimeLine1_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="工作状态"
+                android:textColor="@color/tv_text_gray"
+                android:textSize="@dimen/x42" />
+
+            <TextView
+                android:id="@+id/tv_workTimeLine1_oldDevId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y30"
+                android:text="设备编号"
+                android:textColor="@color/tv_text_gray"
+                android:textSize="@dimen/x36" />
+
+            <TextView
+                android:id="@+id/tv_workTimeLine1_oldDevTypeWithFactory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y30"
+                android:text="设备类型-生产厂家"
+                android:textColor="@color/tv_text_gray"
+                android:textSize="@dimen/x36" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_workTimeLine1_oldDevVideoFile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y30" />
+
+            <TextView
+                android:id="@+id/tv_workTimeLine1_oldDevComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y30"
+                android:text="旧设备描述"
+                android:textColor="@color/tv_text_gray"
+                android:textSize="@dimen/x36" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_workTimeLine1_oldDevPhotoFile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y30" />
+
+
+            <TextView
+                android:id="@+id/tv_workTimeLine1_newDevId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y60"
+                android:text="设备编号"
+                android:textColor="@color/tv_text_gray"
+                android:textSize="@dimen/x36" />
+
+            <TextView
+                android:id="@+id/tv_workTimeLine1_newDevTypeWithFactory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y30"
+                android:text="设备类型-生产厂家"
+                android:textColor="@color/tv_text_gray"
+                android:textSize="@dimen/x36" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_workTimeLine1_newDevVideoFile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y30" />
+
+            <TextView
+                android:id="@+id/tv_workTimeLine1_newDevComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y30"
+                android:text="新设备描述"
+                android:textColor="@color/tv_text_gray"
+                android:textSize="@dimen/x36" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_workTimeLine1_newDevPhotoFile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y30" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

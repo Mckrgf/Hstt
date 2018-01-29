@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_psd_change"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_submit"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.yb.hstt.UI.Activities.PersonCenter.PsdChangeActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_change_psd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_submit">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="修改密码"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x54" />
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tb_change_psd"
+        android:background="@color/activity_background">
+
+        <EditText
+            android:id="@+id/et_old_psd"
+            android:layout_width="@dimen/y940"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/y30"
+            android:background="@drawable/edittext_black_stroke"
+            android:hint="请输入原密码"
+            android:inputType="textPassword"
+            android:padding="@dimen/y30" />
+
+        <EditText
+            android:id="@+id/et_new_psd_a"
+            android:layout_width="@dimen/y940"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_old_psd"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/y30"
+            android:background="@drawable/edittext_black_stroke"
+            android:hint="请输入新密码"
+            android:inputType="textPassword"
+            android:padding="@dimen/y30" />
+
+        <EditText
+            android:id="@+id/et_new_psd_b"
+            android:layout_width="@dimen/y940"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_new_psd_a"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/y30"
+            android:background="@drawable/edittext_black_stroke"
+            android:hint="请再次输入新密码"
+            android:inputType="textPassword"
+            android:padding="@dimen/y30" />
+
+        <Button
+            android:id="@+id/et_change_psd"
+            android:layout_width="@dimen/x960"
+            android:layout_height="@dimen/y150"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/y30"
+            android:background="@drawable/ellips_button_selector"
+            android:text="提交修改"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+</RelativeLayout>

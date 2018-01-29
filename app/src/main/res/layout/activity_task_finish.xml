@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_task_finish"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_submit"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.yb.hstt.UI.Activities.Tasklist.TaskFinishActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/task_finish_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_submit">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="结束工单"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x54" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:background="@color/activity_background"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/task_finish_toolbar"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/y39"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_marginRight="@dimen/x18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/finish" />
+
+                <TextView
+                    android:textSize="@dimen/x36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="工单完成" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginRight="@dimen/x20"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y120"
+
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:textColor="@color/tv_text_black"
+                        android:textSize="@dimen/x48"
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x20"
+                        android:text="工单信息-紧急" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginTop="@dimen/x20"
+                        android:background="@color/divider_color" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_need_to_hide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:id="@+id/divide_a"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginTop="@dimen/y10"
+                        android:background="@color/divider_color" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/divide_a"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_marginRight="@dimen/x20"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:textColor="@color/tv_text_black"
+                            android:textSize="@dimen/x45"
+                            android:layout_marginTop="@dimen/y30"
+                            android:id="@+id/tv_equipment_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="设备名称+设备厂家" />
+
+                        <TextView
+                            android:textColor="@color/tv_text_black"
+                            android:textSize="@dimen/x45"
+                            android:layout_marginTop="@dimen/y24"
+                            android:layout_marginBottom="@dimen/y30"
+                            android:id="@+id/tv_equipment_content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="设备故障信息" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/divide_b"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_below="@id/ll_content"
+                        android:layout_marginTop="@dimen/y10"
+                        android:background="@color/divider_color" />
+
+                    <RelativeLayout
+                        android:id="@+id/ll_contract_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/divide_b"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_marginRight="@dimen/x20"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:textColor="@color/tv_text_black"
+                            android:textSize="@dimen/x45"
+                            android:id="@+id/tv_contact"
+                            android:layout_marginTop="@dimen/y30"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="联系人姓名" />
+
+                        <TextView
+                            android:layout_marginTop="@dimen/y24"
+                            android:textColor="@color/tv_text_black"
+                            android:textSize="@dimen/x45"
+                            android:id="@+id/tv_contact_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_contact"
+                            android:text="1333333333" />
+
+                        <TextView
+                            android:layout_marginTop="@dimen/y24"
+                            android:textColor="@color/tv_text_black"
+                            android:textSize="@dimen/x45"
+                            android:id="@+id/tv_contact_addr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_contact_phone"
+                            android:layout_toLeftOf="@+id/iv_call"
+                            android:text="北京" />
+
+                        <ImageView
+                            android:layout_marginTop="@dimen/x30"
+                            android:layout_marginRight="@dimen/x30"
+                            android:id="@+id/iv_call"
+                            android:padding="@dimen/x30"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/takephone" />
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/divide_c"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_below="@id/ll_contract_info"
+                        android:layout_marginTop="@dimen/y30"
+                        android:background="@color/divider_color" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_marginRight="@dimen/y15"
+                        android:layout_marginLeft="@dimen/x15"
+                        android:layout_marginTop="@dimen/y21"
+                        android:id="@+id/rv_info_pic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/divide_c" />
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/y25"
+                android:layout_marginBottom="@dimen/y15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rv_info_pic"
+                android:layout_centerInParent="true">
+
+                <Button
+                    android:id="@+id/bt_my_task"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/y120"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:layout_weight="1"
+                    android:background="@drawable/ellips_button_selector"
+                    android:text="我的工单"
+                    android:textSize="@dimen/x48"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/bt_main_actvity"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/y120"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:layout_weight="1"
+                    android:background="@drawable/ellips_button_selector"
+                    android:text="首页"
+                    android:textSize="@dimen/x48"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/bt_continue"
+                    android:layout_width="0dp"
+                    android:textSize="@dimen/x48"
+                    android:layout_height="@dimen/y120"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:layout_marginRight="@dimen/x20"
+                    android:layout_weight="2"
+                    android:background="@drawable/ellips_button_selector"
+                    android:text="继续处理"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <View
+        android:visibility="gone"
+        android:id="@+id/v_trans"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_trans"/>
+
+</RelativeLayout>

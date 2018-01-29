@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_task_status_first"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_submit"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.yb.hstt.UI.Activities.Tasklist.TaskStatusFirstActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/task_status_first_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue_submit">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="我的工单"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x54" />
+
+        </android.support.v7.widget.Toolbar>
+
+
+
+        <com.baidu.mapapi.map.MapView
+            android:layout_below="@+id/task_status_first_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/sfl_limit"
+            android:id="@+id/map_view"/>
+
+        <LinearLayout
+            android:gravity="center"
+            android:id="@+id/sfl_limit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y900"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:id="@+id/slv_task_content"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <RelativeLayout
+                    android:id="@+id/ll_popupwindow_basemenu_deal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <LinearLayout
+                        android:id="@+id/ll_title_pop"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/y150"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_marginRight="@dimen/x20"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="工单信息"
+                            android:textColor="@color/tv_text_black"
+                            android:textSize="@dimen/x48"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_last_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="剩余时间:"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/x36" />
+
+                        <TextView
+                            android:id="@+id/tv_left_time_limited"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/x15"
+                            android:text="00:00:00"
+                            android:textColor="@color/blue_submit"
+                            android:textSize="@dimen/x42" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/rl_need_to_hide"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ll_title_pop"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <View
+                            android:id="@+id/divide_a"
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:layout_marginTop="@dimen/y10"
+                            android:background="@color/divider_color" />
+
+                        <include layout="@layout/task_info"/>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rv_info_pic"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/divide_c"
+                            android:layout_marginBottom="@dimen/y20"
+                            android:layout_marginLeft="@dimen/x45"
+                            android:layout_marginRight="@dimen/x45"
+                            android:layout_marginTop="@dimen/y21" />
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+            <View
+                android:visibility="gone"
+                android:id="@+id/view_kong"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <RelativeLayout
+                android:id="@+id/rl_deal"
+                style="@style/mainButton_ll_style">
+
+                <Button
+                    android:id="@+id/tv_start_deal"
+                    style="@style/mainButton_bt_style"
+                    android:text="@string/start_deal"/>
+
+                <Button
+                    android:id="@+id/bt_more"
+                    style="@style/mainButton_more_style"
+                    android:layout_toRightOf="@+id/tv_start_deal"
+                    android:text="•••" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_margin="@dimen/y50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/task_status_first_toolbar">
+            <include layout="@layout/check_location"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20"
+            android:background="@color/white"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/ll_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y150">
+
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/x48"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="工单信息"/>
+
+            <TextView
+                android:textSize="@dimen/x36"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="  (点击查看详细信息)"/>
+
+            <TextView
+                android:textSize="@dimen/x36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:text="剩余时间:"/>
+
+            <TextView
+                android:textSize="@dimen/x42"
+                android:id="@+id/tv_left_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blue_submit"
+                android:text="00:00:00"/>
+
+
+        </LinearLayout>
+
+        <View
+            android:visibility="gone"
+            android:id="@+id/v_trans"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_trans"/>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

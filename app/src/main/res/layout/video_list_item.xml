@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="@dimen/x315"
+        android:layout_height="@dimen/y300"
+        android:background="@drawable/background_gray_v_shape">
+
+        <com.example.yb.hstt.View.MyImageView
+            android:id="@+id/iv_video_list_item"
+            android:layout_width="@dimen/x315"
+            android:layout_height="@dimen/y300"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/iv_video_playTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_play_tag"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/iv_video_deleteTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/bt_bg_gray"
+            android:src="@drawable/ic_close" />
+    </RelativeLayout>
+</LinearLayout>

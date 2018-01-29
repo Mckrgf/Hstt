@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_submit"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.example.yb.hstt.UI.Activities.NewOrderActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_newOrderSuccess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_submit">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/new_order"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x54" />
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/activity_background"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_newOrderSuccess_result"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x120"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="@dimen/x225"
+                android:layout_height="@dimen/x3"
+                android:background="@color/dividing_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x15"
+                android:layout_marginRight="@dimen/x15"
+                android:drawableLeft="@drawable/ic_create_success"
+                android:drawablePadding="@dimen/x18"
+                android:gravity="center"
+                android:text="创建成功"
+                android:textColor="@color/tv_text_gray888"
+                android:textSize="@dimen/x36" />
+
+            <View
+                android:layout_width="@dimen/x225"
+                android:layout_height="@dimen/x3"
+                android:background="@color/dividing_color" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_newOrderSuccess_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_newOrderSuccess_result"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_marginRight="@dimen/x30"
+            android:background="@color/white"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/tv_newOrderSuccess_status"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y120"
+                android:gravity="center_vertical"
+                android:text="工单信息-紧急"
+                android:textColor="@color/tv_text_black"
+                android:textSize="@dimen/x48"
+                android:textStyle="bold"
+                android:paddingLeft="@dimen/x15"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x3"
+                android:background="@color/dividing_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/x30"
+                android:paddingLeft="@dimen/x15"
+                android:paddingBottom="@dimen/x30"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_newOrderSuccess_typeWithFactory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="--"
+                    android:textColor="@color/tv_text_black"
+                    android:textSize="@dimen/x45" />
+
+                <TextView
+                    android:id="@+id/tv_newOrderSuccess_describe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="--"
+                    android:textColor="@color/tv_text_black"
+                    android:layout_marginTop="@dimen/y24"
+                    android:textSize="@dimen/x45" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x3"
+                android:background="@color/dividing_color" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/x15"
+                android:paddingTop="@dimen/y30"
+                android:paddingBottom="@dimen/y30">
+
+                <TextView
+                    android:id="@+id/tv_newOrderSuccess_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="--"
+                    android:textColor="@color/tv_text_black"
+                    android:textSize="@dimen/x45" />
+
+                <TextView
+                    android:id="@+id/tv_newOrderSuccess_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_newOrderSuccess_user"
+                    android:text="--"
+                    android:textColor="@color/tv_text_black"
+                    android:layout_marginTop="@dimen/y24"
+                    android:textSize="@dimen/x45" />
+
+                <TextView
+                    android:id="@+id/tv_newOrderSuccess_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_newOrderSuccess_phone"
+                    android:text="--"
+                    android:textColor="@color/tv_text_black"
+                    android:layout_marginTop="@dimen/y24"
+                    android:textSize="@dimen/x45" />
+
+                <ImageView
+                    android:padding="@dimen/x30"
+                    android:id="@+id/iv_newOrderSuccess_takephone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/x30"
+                    android:src="@drawable/takephone" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x3"
+                android:background="@color/dividing_color" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_newOrderSuccess_photos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/y21"
+                android:layout_marginTop="@dimen/y21"
+                android:layout_marginLeft="@dimen/x15"
+                android:layout_marginRight="@dimen/x15"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/y45"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_newOrderSuccess_toBack"
+                android:layout_width="@dimen/x480"
+                android:layout_height="@dimen/y120"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/ellips_button_selector"
+                android:text="继续创建"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/bt_newOrderSuccess_toMain"
+                android:layout_width="@dimen/x480"
+                android:layout_height="@dimen/y120"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/x60"
+                android:background="@drawable/ellips_button_selector"
+                android:text="返回首页"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

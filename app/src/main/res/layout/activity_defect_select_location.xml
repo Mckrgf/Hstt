@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_defect_select_location"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/blue_submit"
+    android:fitsSystemWindows="true"
+    tools:context=".UI.Activities.SelectLocationActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/select_location_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_submit"
+        android:navigationIcon="@mipmap/back_bt">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="位置选择"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x54" />
+    </android.support.v7.widget.Toolbar>
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/bmapView"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clickable="true" />
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:background="@drawable/ellips_button_selector"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:layout_margin="@dimen/x5"
+            android:onClick="confirm"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <Button
+            android:text="取消"
+            android:layout_margin="@dimen/x5"
+            android:textColor="@color/white"
+            android:background="@drawable/ellips_button_selector"
+            android:onClick="btnMyloc"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

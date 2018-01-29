@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/ll_sort"
+    android:background="@color/white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:gravity="center"
+        android:id="@+id/ll_sort_time"
+        android:orientation="horizontal"
+        android:layout_width="@dimen/x393"
+        android:layout_height="@dimen/y120">
+        <ImageView
+            android:layout_marginRight="@dimen/x24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sort_list_a"/>
+        <TextView
+            android:textSize="@dimen/x42"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="最新任务在上"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/divider_color"/>
+
+    <LinearLayout
+        android:gravity="center"
+        android:id="@+id/ll_sort_level"
+        android:orientation="horizontal"
+        android:layout_width="@dimen/x393"
+        android:layout_height="@dimen/y120">
+        <ImageView
+            android:layout_marginRight="@dimen/x24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sort_list_b"/>
+        <TextView
+            android:textSize="@dimen/x42"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="最新任务在下"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/divider_color"/>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:gravity="center"
+        android:id="@+id/ll_sort_addr"
+        android:orientation="horizontal"
+        android:layout_width="@dimen/x393"
+        android:layout_height="@dimen/y120">
+        <ImageView
+            android:layout_marginRight="@dimen/x24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sort_addr"/>
+        <TextView
+            android:textSize="@dimen/x42"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="按地址排序"/>
+
+    </LinearLayout>
+
+</LinearLayout>

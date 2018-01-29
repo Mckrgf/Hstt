@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/x30"
+    android:paddingRight="@dimen/x30"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_workTimeLine_time"
+            android:layout_width="@dimen/x120"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:gravity="right"
+            android:text="09-24 12:42"
+            android:textColor="@color/tv_text_gray"
+            android:textSize="@dimen/x42" />
+
+        <LinearLayout
+            android:id="@+id/ll_workingTimeLine_line"
+            android:layout_width="@dimen/x60"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x24"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/tv_workTimeLine_time"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_workTimeLine_lingLog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_timeline_arrow" />
+
+            <View
+                android:id="@+id/v_workTimeLine_ling"
+                android:layout_width="@dimen/x2"
+                android:layout_height="match_parent"
+                android:background="@color/dividing_color"></View>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_toRightOf="@+id/ll_workingTimeLine_line"
+            android:layout_marginBottom="@dimen/y90"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_workTimeLine_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="工作状态"
+                android:textColor="@color/tv_text_gray"
+                android:textSize="@dimen/x42" />
+
+            <TextView
+                android:id="@+id/tv_workTimeLine_Devcomment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y30"
+                android:text="描述"
+                android:textColor="@color/tv_text_gray"
+                android:textSize="@dimen/x36" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

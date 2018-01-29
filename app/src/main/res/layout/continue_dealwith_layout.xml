@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingTop="@dimen/y60"
+    android:paddingLeft="@dimen/x30"
+    android:paddingRight="@dimen/x30"
+    android:paddingBottom="@dimen/y30"
+    >
+    <Button
+        android:id="@+id/bt_continue_dealwith_change"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y120"
+        android:background="@drawable/ellips_button_selector"
+        android:text="继续更换"
+        android:textColor="@color/white"
+        android:textSize="@dimen/x48" />
+    <Button
+        android:id="@+id/bt_continue_dealwith_repair"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y120"
+        android:background="@drawable/ellips_button_selector"
+        android:layout_marginTop="@dimen/y30"
+        android:text="继续维修"
+        android:textColor="@color/white"
+        android:textSize="@dimen/x48" />
+    <Button
+        android:id="@+id/bt_continue_dealwith_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y120"
+        android:background="@drawable/background_gray_bt_selector"
+        android:layout_marginTop="@dimen/y30"
+        android:text="取消    "
+        android:textColor="@color/white"
+        android:textSize="@dimen/x48" />
+
+</LinearLayout>

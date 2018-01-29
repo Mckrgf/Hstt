@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_terminal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_submit"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.example.yb.hstt.UI.Activities.AddTerminalActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/add_terminal_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_submit"
+        android:navigationIcon="@mipmap/back_bt">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/add_terminal"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x54" />
+    </android.support.v7.widget.Toolbar>
+
+    <!--页面主体-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y135">
+            <TextView
+                android:textSize="@dimen/x42"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_marginRight="@dimen/x30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="资产编号"/>
+            <TextView
+                android:id="@+id/tv_asset_no"
+                android:textColor="@color/tv_text_gray"
+                android:textSize="@dimen/x42"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="资产编号"/>
+            <ImageView
+                android:id="@+id/iv_scan"
+                android:layout_marginRight="@dimen/x45"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_scan"/>
+        </LinearLayout>
+
+        <View
+            android:layout_marginRight="@dimen/x30"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#ddd"/>
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:minHeight="@dimen/y135"
+
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="@dimen/x42"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_marginRight="@dimen/x30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="位置信息"/>
+            <EditText
+                android:background="@null"
+                android:id="@+id/tv_location"
+                android:textColor="@color/tv_text_gray"
+                android:textSize="@dimen/x42"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="定位信息"/>
+            <ImageView
+                android:id="@+id/iv_location"
+                android:layout_marginRight="@dimen/x45"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_location"/>
+        </LinearLayout>
+
+        <View
+            android:layout_marginRight="@dimen/x30"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#ddd"/>
+
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y135">
+            <TextView
+                android:textSize="@dimen/x42"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_marginRight="@dimen/x30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="终端区划码"/>
+            <TextView
+                android:id="@+id/tv_area_code"
+                android:textColor="@color/tv_text_gray"
+                android:textSize="@dimen/x42"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="终端区划码"/>
+
+            <ImageView
+                android:id="@+id/iv_area_code"
+                android:layout_marginRight="@dimen/x45"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_scan"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/y30"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y135">
+            <TextView
+                android:textSize="@dimen/x42"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_marginRight="@dimen/x30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="通讯地址"/>
+            <TextView
+                android:id="@+id/tv_communication"
+                android:textColor="@color/tv_text_gray"
+                android:textSize="@dimen/x42"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="根据资产编号自动生成"/>
+        </LinearLayout>
+        <View
+            android:layout_marginRight="@dimen/x30"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#ddd"/>
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y135">
+            <TextView
+                android:textSize="@dimen/x42"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_marginRight="@dimen/x30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="系统ID号"/>
+            <TextView
+                android:id="@+id/tv_id"
+                android:textColor="@color/tv_text_gray"
+                android:textSize="@dimen/x42"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="输入ID号"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/y30"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y135">
+            <TextView
+                android:textSize="@dimen/x42"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_marginRight="@dimen/x30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="操作类型"/>
+            <TextView
+                android:id="@+id/tv_operate_type"
+                android:textColor="@color/tv_text_gray"
+                android:textSize="@dimen/x42"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="请选择操作类型"/>
+        </LinearLayout>
+
+        <View
+            android:layout_marginRight="@dimen/x30"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#ddd"/>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y135">
+            <TextView
+                android:textSize="@dimen/x42"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_marginRight="@dimen/x30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="调试状态"/>
+            <TextView
+                android:id="@+id/tv_status"
+                android:textColor="@color/tv_text_gray"
+                android:textSize="@dimen/x42"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="请选择调试状态"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/y30"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y135">
+            <TextView
+                android:textSize="@dimen/x42"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_marginRight="@dimen/x30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="现场照片"/>
+            <TextView
+                android:textColor="@color/tv_text_gray"
+                android:textSize="@dimen/x42"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="进行拍照"/>
+            <ImageView
+                android:id="@+id/iv_take_pic"
+                android:layout_marginRight="@dimen/x45"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_take_pic"/>
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rc_pic"/>
+
+    </LinearLayout>
+
+    <!--下方导航栏-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/bt_save"
+                android:layout_width="@dimen/x480"
+                android:layout_height="@dimen/y120"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/ellips_button_selector"
+                android:text="保存"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x42" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/bt_upload"
+                android:layout_width="@dimen/x480"
+                android:layout_height="@dimen/y120"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/ellips_button_selector"
+                android:text="上报主站"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x42" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!--因为背景是蓝色,所以直接设置margin不好使,加个留白-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y45"
+        android:background="@color/white" />
+
+</LinearLayout>

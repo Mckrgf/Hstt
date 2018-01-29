@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_submit"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:id="@+id/activity_change_device"
+    tools:context="com.example.yb.hstt.UI.Activities.ChangeDeviceActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/tb_changeDevice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blue_submit"
+                app:navigationIcon="@mipmap/ic_return">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/changeDevice"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/x54" />
+            </android.support.v7.widget.Toolbar>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/activity_background">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/activity_background"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/x30"
+                        android:orientation="vertical">
+                        <!--旧设备信息-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/tv_changeDevice_oldLayoutInfo"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/y120"
+                                android:drawableRight="@drawable/ic_down"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/x15"
+                                android:paddingRight="@dimen/x30"
+                                android:text="旧设备信息"
+                                android:textColor="@color/tv_text_black"
+                                android:textSize="@dimen/x48"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_changeDevice_oldLayoutInfo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingBottom="@dimen/y60">
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/x2"
+                                    android:background="@color/dividing_color" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/x30"
+                                    android:layout_marginTop="@dimen/y30"
+                                    android:text="设备编号"
+                                    android:textColor="@color/tv_text_gray"
+                                    android:textSize="@dimen/x42" />
+
+                                <TextView
+                                    android:id="@+id/tv_changeDevice_oldDeviceid"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/y120"
+                                    android:layout_marginLeft="@dimen/x30"
+                                    android:layout_marginRight="@dimen/x30"
+                                    android:layout_marginTop="@dimen/y15"
+                                    android:background="@drawable/background_gray_et_shape"
+                                    android:drawableRight="@drawable/ic_scan"
+                                    android:gravity="center_vertical"
+                                    android:paddingRight="@dimen/x15" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/x30"
+                                    android:layout_marginTop="@dimen/y30"
+                                    android:text="设备类型"
+                                    android:textColor="@color/tv_text_gray"
+                                    android:textSize="@dimen/x42" />
+
+                                <TextView
+                                    android:id="@+id/tv_changeDevice_oldDeviceType"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/y120"
+                                    android:layout_marginLeft="@dimen/x30"
+                                    android:layout_marginRight="@dimen/x30"
+                                    android:layout_marginTop="@dimen/y15"
+                                    android:background="@drawable/background_gray_et_shape"
+                                    android:paddingRight="@dimen/x15" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/x30"
+                                    android:layout_marginTop="@dimen/y30"
+                                    android:text="生产厂家"
+                                    android:textColor="@color/tv_text_gray"
+                                    android:textSize="@dimen/x42" />
+
+                                <TextView
+                                    android:id="@+id/tv_changeDevice_oldDeviceFactory"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/y120"
+                                    android:layout_marginLeft="@dimen/x30"
+                                    android:layout_marginRight="@dimen/x30"
+                                    android:layout_marginTop="@dimen/y15"
+                                    android:background="@drawable/background_gray_et_shape"
+                                    android:paddingRight="@dimen/x15" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                        <!--旧设备处理-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/y30"
+                            android:background="@color/white"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/tv_changeDevice_oldLayoutDealWith"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/y120"
+                                android:drawableRight="@drawable/ic_down"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/x15"
+                                android:paddingRight="@dimen/x30"
+                                android:text="旧设备处理"
+                                android:textColor="@color/tv_text_black"
+                                android:textSize="@dimen/x48"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_changeDevice_oldLayoutDealWith"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/y30"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/x2"
+                                    android:background="@color/dividing_color" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/x30"
+                                    android:layout_marginTop="@dimen/y30"
+                                    android:text="输入文字或选择标签"
+                                    android:textColor="@color/tv_text_gray"
+                                    android:textSize="@dimen/x42" />
+
+                                <RadioGroup
+                                    android:id="@+id/rg_changeDevice_old"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/x30"
+                                    android:layout_marginRight="@dimen/x30"
+                                    android:layout_marginTop="@dimen/y15"
+                                    android:drawableRight="@drawable/ic_scan"
+                                    android:orientation="horizontal"
+                                    android:paddingRight="@dimen/x15">
+
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/half_blue_selector"
+                                        android:button="@null"
+                                        android:text="无法处理"
+                                        android:textColor="@drawable/half_blue_color_selector" />
+
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/x30"
+                                        android:background="@drawable/half_blue_selector"
+                                        android:button="@null"
+                                        android:text="其他人处理"
+                                        android:textColor="@drawable/half_blue_color_selector" />
+
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/x30"
+                                        android:background="@drawable/half_blue_selector"
+                                        android:button="@null"
+                                        android:text="已完成"
+                                        android:textColor="@drawable/half_blue_color_selector" />
+                                </RadioGroup>
+
+                                <EditText
+                                    android:id="@+id/et_changeDevice_OldWorkResult"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/y180"
+                                    android:layout_marginLeft="@dimen/x30"
+                                    android:layout_marginRight="@dimen/x30"
+                                    android:layout_marginTop="@dimen/y15"
+                                    android:background="@drawable/background_gray_et_shape"
+                                    android:gravity="left"
+                                    android:minLines="2"
+                                    android:padding="@dimen/x15"
+                                    android:text="备注"
+                                    android:textColor="@color/tv_text_black"
+                                    android:textSize="@dimen/x45" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/x30"
+                                    android:layout_marginTop="@dimen/y30"
+                                    android:text="选择拍照、视频："
+                                    android:textColor="@color/tv_text_gray"
+                                    android:textSize="@dimen/x42" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/x30"
+                                    android:layout_marginTop="@dimen/y30"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/iv_changeDevice_oldtakephoto"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/takephoto" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_changeDevice_oldtakevideo"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/x60"
+                                        android:src="@drawable/takevideo" />
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/rl_changeDevice_oldDevicePhotoTag"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="@dimen/x15"
+                                    android:layout_marginRight="@dimen/x15"
+                                    android:layout_marginTop="@dimen/y21"
+                                    android:visibility="gone">
+                                    <TextView
+                                        android:id="@+id/tv_changeDevice_oldDevicePhotoTag"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="添加的照片"
+                                        android:textColor="@color/tv_text_gray"
+                                        android:textSize="@dimen/x42"/>
+                                    <TextView
+                                        android:id="@+id/tv_changeDevice_oldDevicePhotoTimeTag"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_toRightOf="@+id/tv_changeDevice_oldDevicePhotoTag"
+                                        android:text="2017.09.11"
+                                        android:layout_marginLeft="@dimen/x36"
+                                        android:textColor="@color/tv_text_gray"
+                                        android:textSize="@dimen/x42"/>
+
+                                    <android.support.v7.widget.RecyclerView
+                                        android:id="@+id/rv_changeDevice_oldphotos"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/tv_changeDevice_oldDevicePhotoTag"
+                                        android:layout_marginTop="@dimen/y30"
+                                        />
+                                </RelativeLayout>
+                                <RelativeLayout
+                                    android:id="@+id/rl_changeDevice_oldDeviceVideoTag"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="@dimen/x15"
+                                    android:layout_marginRight="@dimen/x15"
+                                    android:layout_marginTop="@dimen/y21"
+                                    android:visibility="gone">
+                                    <TextView
+                                        android:id="@+id/tv_changeDevice_oldDeviceVideoTag"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="添加的视频"
+                                        android:textColor="@color/tv_text_gray"
+                                        android:textSize="@dimen/x42"/>
+                                    <TextView
+                                        android:id="@+id/tv_changeDevice_oldDeviceVideoTimeTag"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_toRightOf="@+id/tv_changeDevice_oldDeviceVideoTag"
+                                        android:text="2017.09.11"
+                                        android:layout_marginLeft="@dimen/x36"
+                                        android:textColor="@color/tv_text_gray"
+                                        android:textSize="@dimen/x42"/>
+
+                                    <android.support.v7.widget.RecyclerView
+                                        android:id="@+id/rv_changeDevice_oldvideos"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/tv_changeDevice_oldDeviceVideoTag"
+                                        android:layout_marginTop="@dimen/y30"
+                                        />
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <!--新设备信息-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/y30"
+                            android:background="@color/white"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/tv_changeDevice_newLayoutInfo"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/y120"
+                                android:drawableRight="@drawable/ic_down"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/x15"
+                                android:paddingRight="@dimen/x30"
+                                android:text="新设备信息"
+                                android:textColor="@color/tv_text_black"
+                                android:textSize="@dimen/x48"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_changeDevice_newLayoutInfo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingBottom="@dimen/y60">
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/x2"
+                                    android:background="@color/dividing_color" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/x30"
+                                    android:layout_marginTop="@dimen/y30"
+                                    android:text="设备编号"
+                                    android:textColor="@color/tv_text_gray"
+                                    android:textSize="@dimen/x42" />
+
+                                <TextView
+                                    android:id="@+id/tv_changeDevice_newDeviceid"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/y120"
+                                    android:layout_marginLeft="@dimen/x30"
+                                    android:layout_marginRight="@dimen/x30"
+                                    android:layout_marginTop="@dimen/y15"
+                                    android:background="@drawable/background_gray_et_shape"
+                                    android:drawableRight="@drawable/ic_scan"
+                                    android:gravity="center_vertical"
+                                    android:paddingRight="@dimen/x15" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/x30"
+                                    android:layout_marginTop="@dimen/y30"
+                                    android:text="设备类型"
+                                    android:textColor="@color/tv_text_gray"
+                                    android:textSize="@dimen/x42" />
+
+                                <TextView
+                                    android:id="@+id/tv_changeDevice_newDeviceType"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/y120"
+                                    android:layout_marginLeft="@dimen/x30"
+                                    android:layout_marginRight="@dimen/x30"
+                                    android:layout_marginTop="@dimen/y15"
+                                    android:background="@drawable/background_gray_et_shape"
+                                    android:paddingRight="@dimen/x15" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/x30"
+                                    android:layout_marginTop="@dimen/y30"
+                                    android:text="生产厂家"
+                                    android:textColor="@color/tv_text_gray"
+                                    android:textSize="@dimen/x42" />
+
+                                <TextView
+                                    android:id="@+id/tv_changeDevice_newDeviceFactory"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/y120"
+                                    android:layout_marginLeft="@dimen/x30"
+                                    android:layout_marginRight="@dimen/x30"
+                                    android:layout_marginTop="@dimen/y15"
+                                    android:background="@drawable/background_gray_et_shape"
+                                    android:paddingRight="@dimen/x15" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <!--新设备处理-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/y30"
+                            android:background="@color/white"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/tv_changeDevice_newLayoutDealWith"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/y120"
+                                android:drawableRight="@drawable/ic_down"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/x15"
+                                android:paddingRight="@dimen/x30"
+                                android:text="新设备处理"
+                                android:textColor="@color/tv_text_black"
+                                android:textSize="@dimen/x48"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_changeDevice_newLayoutDealWith"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingBottom="@dimen/y30"
+                                android:visibility="visible">
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/x2"
+                                    android:background="@color/dividing_color" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/x30"
+                                    android:layout_marginTop="@dimen/y30"
+                                    android:text="输入文字或选择标签"
+                                    android:textColor="@color/tv_text_gray"
+                                    android:textSize="@dimen/x42" />
+
+                                <RadioGroup
+                                    android:id="@+id/rg_changeDevice_new"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/x30"
+                                    android:layout_marginRight="@dimen/x30"
+                                    android:layout_marginTop="@dimen/y15"
+                                    android:drawableRight="@drawable/ic_scan"
+                                    android:orientation="horizontal"
+                                    android:paddingRight="@dimen/x15">
+
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/half_blue_selector"
+                                        android:button="@null"
+                                        android:text="无法处理"
+                                        android:textColor="@drawable/half_blue_color_selector" />
+
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/x30"
+                                        android:background="@drawable/half_blue_selector"
+                                        android:button="@null"
+                                        android:text="其他人处理"
+                                        android:textColor="@drawable/half_blue_color_selector" />
+
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/x30"
+                                        android:background="@drawable/half_blue_selector"
+                                        android:button="@null"
+                                        android:text="已完成"
+                                        android:textColor="@drawable/half_blue_color_selector" />
+                                </RadioGroup>
+
+                                <EditText
+                                    android:id="@+id/et_changeDevice_NewWorkResult"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/y180"
+                                    android:layout_marginLeft="@dimen/x30"
+                                    android:layout_marginRight="@dimen/x30"
+                                    android:layout_marginTop="@dimen/y15"
+                                    android:background="@drawable/background_gray_et_shape"
+                                    android:gravity="left"
+                                    android:minLines="2"
+                                    android:padding="@dimen/x15"
+                                    android:text="备注"
+                                    android:textColor="@color/tv_text_black"
+                                    android:textSize="@dimen/x45" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/x30"
+                                    android:layout_marginTop="@dimen/y30"
+                                    android:text="选择拍照、视频："
+                                    android:textColor="@color/tv_text_gray"
+                                    android:textSize="@dimen/x42" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/y30"
+                                    android:layout_marginLeft="@dimen/x30"
+                                    android:layout_marginTop="@dimen/y30"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/iv_changeDevice_newtakephoto"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/takephoto" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_changeDevice_newtakevideo"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/x60"
+                                        android:src="@drawable/takevideo" />
+                                </LinearLayout>
+                                <RelativeLayout
+                                    android:id="@+id/rl_changeDevice_newDevicePhotoTag"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="@dimen/x15"
+                                    android:layout_marginRight="@dimen/x15"
+                                    android:layout_marginTop="@dimen/y21"
+                                    android:visibility="gone">
+                                    <TextView
+                                        android:id="@+id/tv_changeDevice_newDevicePhotoTag"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="添加的照片"
+                                        android:textColor="@color/tv_text_gray"
+                                        android:textSize="@dimen/x42"/>
+                                    <TextView
+                                        android:id="@+id/tv_changeDevice_newDevicePhotoTimeTag"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_toRightOf="@+id/tv_changeDevice_newDevicePhotoTag"
+                                        android:text="2017.09.11"
+                                        android:layout_marginLeft="@dimen/x36"
+                                        android:textColor="@color/tv_text_gray"
+                                        android:textSize="@dimen/x42"/>
+
+                                    <android.support.v7.widget.RecyclerView
+                                        android:id="@+id/rv_changeDevice_newphotos"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/tv_changeDevice_newDevicePhotoTag"
+                                        android:layout_marginTop="@dimen/y30"
+                                        />
+                                </RelativeLayout>
+                                <RelativeLayout
+                                    android:id="@+id/rl_changeDevice_newDeviceVideoTag"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="@dimen/x15"
+                                    android:layout_marginRight="@dimen/x15"
+                                    android:layout_marginTop="@dimen/y21"
+                                    android:visibility="gone">
+                                    <TextView
+                                        android:id="@+id/tv_changeDevice_newDeviceVideoTag"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="添加的视频"
+                                        android:textColor="@color/tv_text_gray"
+                                        android:textSize="@dimen/x42"/>
+                                    <TextView
+                                        android:id="@+id/tv_changeDevice_newDeviceVideoTimeTag"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_toRightOf="@+id/tv_changeDevice_newDeviceVideoTag"
+                                        android:text="2017.09.11"
+                                        android:layout_marginLeft="@dimen/x36"
+                                        android:textColor="@color/tv_text_gray"
+                                        android:textSize="@dimen/x42"/>
+
+                                    <android.support.v7.widget.RecyclerView
+                                        android:id="@+id/rv_changeDevice_newvideos"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/tv_changeDevice_newDeviceVideoTag"
+                                        android:layout_marginTop="@dimen/y30"
+                                        />
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                        <RelativeLayout
+                            android:layout_marginTop="@dimen/y45"
+                            style="@style/mainButton_ll_style">
+
+                            <Button
+                                style="@style/mainButton_bt_style"
+                                android:id="@+id/bt_changeDevice_save"
+                                android:text="到达现场" />
+
+                            <Button
+                                android:id="@+id/bt_more"
+                                android:text="•••"
+                                style="@style/mainButton_more_style"
+                                android:layout_toRightOf="@+id/bt_changeDevice_save"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </ScrollView>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:visibility="gone"
+            android:id="@+id/v_trans"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_trans"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

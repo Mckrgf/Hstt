@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ll_function_item"
+    android:background="@drawable/function_gray_selector"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/iv_function"
+        android:layout_marginTop="@dimen/y66"
+        android:layout_marginLeft="@dimen/x105"
+        android:layout_marginRight="@dimen/x105"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/terminal_install" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/y42"
+        android:textSize="@dimen/x42"
+        android:id="@+id/tv_function"
+        android:layout_marginBottom="@dimen/y66"/>
+
+</LinearLayout>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_terminal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_submit"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.example.yb.hstt.UI.Activities.AddUserActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/add_terminal_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_submit"
+        android:navigationIcon="@mipmap/back_bt">
+
+        <TextView
+            android:id="@+id/tv_add_device_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="用户详情"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x54" />
+    </android.support.v7.widget.Toolbar>
+
+    <!--页面主体-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/activity_background"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y135">
+            <TextView
+                android:textSize="@dimen/x42"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_marginRight="@dimen/x30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用户编号"/>
+            <TextView
+                android:id="@+id/tv_asset_no"
+                android:textColor="@color/tv_text_gray"
+                android:textSize="@dimen/x42"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="扫描编号"/>
+            <ImageView
+                android:clickable="false"
+                android:id="@+id/iv_scan"
+                android:layout_marginRight="@dimen/x45"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_scan"/>
+        </LinearLayout>
+
+        <View
+            android:layout_marginRight="@dimen/x30"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#ddd"/>
+
+        <LinearLayout
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y135">
+            <TextView
+                android:textSize="@dimen/x42"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_marginRight="@dimen/x30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="位置信息"/>
+            <EditText
+                android:background="@null"
+                android:enabled="false"
+                android:id="@+id/tv_location"
+                android:textColor="@color/tv_text_gray"
+                android:textSize="@dimen/x42"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="定位信息"/>
+            <ImageView
+                android:clickable="false"
+                android:id="@+id/iv_location"
+                android:layout_marginRight="@dimen/x45"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_location"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:background="@color/white"
+            android:id="@+id/ll_add_user_device"
+            android:layout_marginTop="@dimen/y30"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y120">
+            <TextView
+                android:textSize="@dimen/x42"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_marginRight="@dimen/x30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="添加设备"/>
+            <TextView
+                android:textColor="@color/tv_text_gray"
+                android:textSize="@dimen/x42"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="请选择要添加的设备"/>
+            <ImageView
+                android:id="@+id/iv_take_pic"
+                android:layout_marginRight="@dimen/x45"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_right"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title_add_device"
+            android:layout_marginTop="@dimen/y25"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/y25"
+            android:text="用户已添加的设备"/>
+
+        <com.andview.refreshview.XRefreshView
+            android:id="@+id/device_list_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.RecyclerView
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rc_pic"/>
+        </com.andview.refreshview.XRefreshView>
+
+
+
+    </LinearLayout>
+
+    <!--下方导航栏-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/activity_background"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <Button
+                android:layout_marginTop="@dimen/y45"
+                android:id="@+id/bt_save"
+                android:layout_width="@dimen/x480"
+                android:layout_height="@dimen/y120"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/ellips_button_selector"
+                android:text="保存"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x42" />
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+    <!--因为背景是蓝色,所以直接设置margin不好使,加个留白-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y45"
+        android:background="@color/activity_background" />
+
+</LinearLayout>

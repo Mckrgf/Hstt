@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.yb.hstt">
+
+    <!-- 网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 获取手机的状态权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 内存卡写入权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 内存卡读取权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 通过WiFi或移动基站的方式获取用户错略的经纬度信息,定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 通过GPS芯片接收卫星的定位信息,定位精度达10米以内 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 访问相机拍照 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 自定义相机需要的权限 -->
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <!-- 允许震动 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 打电话 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+
+    <application
+        android:name=".Base.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="XI4m0qSnTF5fUAEwzziOzS7G0ziiRXir" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+        <service android:name=".Service.UpLoadService" />
+
+        <receiver android:name=".UI.NetBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        //主页面
+        <activity
+            android:name=".Base.HsttBaseActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".UI.Activities.LoginActivity" />
+        //添加终端
+        <activity
+            android:name=".UI.Activities.MainActivity"
+            android:launchMode="singleTask" />
+        //添加终端
+        <activity android:name=".UI.Activities.AddTerminalActivity" />
+        //添加用户
+        <activity
+            android:name=".UI.Activities.AddUserActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        //添加用户下的设备
+        <activity android:name=".UI.Activities.AddUserDeviceActivity" />
+        //编辑用户下的设备
+        <activity android:name=".UI.Activities.UserDeviceDetailActivity" />
+        //终端列表
+        <activity android:name=".UI.Activities.TerminalListActivity" />
+        //设备列表
+        <activity android:name=".UI.Activities.DeviceListActivity" />
+        //终端详情
+        <activity
+            android:name=".UI.Activities.TerminalDetailActivity"
+            android:windowSoftInputMode="adjustPan" />
+        //图片预览
+        <activity
+            android:name=".UI.Activities.ImageBrowseActivity"
+            android:process=":picture" />
+        //Log
+        <activity android:name=".UI.Activities.LogActivity" />
+        //扫描界面
+        <activity android:name=".zxing.activity.CaptureActivity" />
+        //选择位置信息
+        <activity android:name=".UI.Activities.SelectLocationActivity" />
+        <activity android:name=".UI.Activities.MoreDataActivity" />
+        <activity android:name=".UI.Activities.SettingActivity" />
+        <!-- 新建工单 -->
+        <activity android:name=".UI.Activities.NewOrderActivity" />
+        <!-- 新建工单完成 -->
+        <activity android:name=".UI.Activities.NewOrderSuccessActivity" />
+        <activity
+            android:name=".UI.Activities.Tasklist.TaskListActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".UI.Activities.Tasklist.TaskStatusFirstActivity" />
+        <activity android:name=".UI.Activities.Tasklist.TaskFinishActivity" />
+        <!-- 录制视频 -->
+        <activity
+            android:name=".record.MediaPreviewActivity"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/CameraTheme" />
+        <!-- 录制视频后预览 -->
+        <activity
+            android:name=".record.MediaRecorderActivity"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/CameraTheme" />
+        <activity android:name=".UI.Activities.Tasklist.TaskStatusThirdActivity" />
+
+        <!-- 更换设备 -->
+        <activity android:name=".UI.Activities.ChangeDeviceActivity" />
+        <!-- 更换设备成功 -->
+        <activity android:name=".UI.Activities.ChangeDeviceSuccessActivity" />
+        <activity android:name=".UI.Activities.Tasklist.TaskStatusSecondActivity" />
+        <!-- 维修设备 -->
+        <activity android:name=".UI.Activities.RepairDeviceActivity" />
+        <activity android:name=".UI.Activities.RepairDeviceSuccssActivity" />
+        <activity android:name=".UI.Activities.TheOrderFinishedListActivity" />
+        <activity android:name=".UI.Activities.FinalFinishedOrderActivity" />
+        <activity android:name=".UI.Activities.Tasklist.TaskStatusFourthActivity" />
+        <activity
+            android:name=".UI.Activities.SplashActivity"
+            android:theme="@style/LaunchTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".UI.Activities.PlayVideoActivity" />
+
+        <service
+            android:name=".Service.LocationService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":remoteuploadservice" />
+
+        <activity android:name=".UI.Activities.WorkingTimeLineActivity" />
+        <activity android:name=".UI.Activities.PersonCenter.PsdChangeActivity" />
+        <activity android:name=".UI.Activities.PersonCenter.FeedbackActivity" />
+        <activity android:name=".UI.Activities.ChangeDeviceDetailActivity" />
+        <activity android:name=".UI.Activities.RepairDeviceDetailActivity"></activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>

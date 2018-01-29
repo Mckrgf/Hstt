@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_feedback"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/blue_submit"
+    tools:context="com.example.yb.hstt.UI.Activities.PersonCenter.FeedbackActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_submit">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="意见反馈"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x54" />
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tb_feedback"
+        android:background="@color/activity_background">
+
+        <TextView
+            android:lineSpacingExtra="@dimen/y20"
+            android:id="@+id/tv_1"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/y30"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="致力为您提供专业高效高品质的服务\n欢迎您提供宝贵的意见和建议"/>
+
+        <TextView
+            android:layout_marginTop="@dimen/y50"
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="反馈类型"
+            android:textSize="@dimen/x48"
+            android:layout_below="@+id/tv_1"
+            android:layout_marginLeft="@dimen/x30" />
+
+        <View
+            android:id="@+id/divide_a"
+            android:layout_below="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_margin="@dimen/x30"
+            android:background="@color/divider_color"/>
+
+        <RadioGroup
+            android:id="@+id/rg_feedback"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_below="@+id/divide_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rb_feedback_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="系统卡慢"
+                android:textColor="@color/radiobutton_select"
+                android:background="@drawable/radiobutton_check_selector"
+                android:button="@null"/>
+
+            <RadioButton
+                android:layout_marginLeft="@dimen/x20"
+                android:id="@+id/rb_feedback_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="定位不准确"
+                android:textColor="@color/radiobutton_select"
+                android:background="@drawable/radiobutton_check_selector"
+                android:button="@null"/>
+
+            <RadioButton
+                android:layout_marginLeft="@dimen/x20"
+                android:id="@+id/rb_feedback_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="其他"
+                android:textColor="@color/radiobutton_select"
+                android:background="@drawable/radiobutton_check_selector"
+                android:button="@null"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_title_content"
+            android:layout_below="@+id/rg_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="反馈内容"
+            android:textSize="@dimen/x48"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_marginTop="@dimen/y60"/>
+
+        <EditText
+            android:padding="@dimen/x5"
+            android:gravity="top|left"
+            android:layout_margin="@dimen/x30"
+            android:layout_below="@+id/tv_title_content"
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="4"
+            android:background="@drawable/edittext_black_stroke"/>
+
+        <Button
+            android:id="@+id/et_change_psd"
+            android:layout_width="@dimen/x960"
+            android:layout_height="@dimen/y150"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/y30"
+            android:background="@drawable/ellips_button_selector"
+            android:text="提交"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+</RelativeLayout>

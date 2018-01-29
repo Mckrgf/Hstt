@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_task_status_second"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_submit"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.yb.hstt.UI.Activities.Tasklist.TaskStatusSecondActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/task_status_second_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_submit">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="赶赴现场"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x54" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <com.baidu.mapapi.map.MapView
+        android:layout_below="@+id/task_status_second_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/map_view"/>
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_margin="@dimen/y50"
+        android:layout_below="@+id/task_status_second_toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="倒计时   00:00"
+        android:textColor="@color/white"
+        android:padding="@dimen/x10"
+        android:background="@drawable/ellips_button_selector"/>
+
+    <RelativeLayout
+        android:layout_marginLeft="@dimen/y50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_time">
+        <include layout="@layout/check_location"/>
+    </RelativeLayout>
+
+
+
+
+
+
+
+    <ImageView
+        android:id="@+id/iv_task_info"
+        android:layout_margin="@dimen/y50"
+        android:layout_below="@+id/task_status_second_toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/task_info"/>
+
+    <ImageView
+        android:id="@+id/iv_navigation"
+        android:layout_marginTop="@dimen/y200"
+        android:layout_marginRight="@dimen/y50"
+        android:layout_below="@+id/task_status_second_toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/navigation"/>
+
+
+    <RelativeLayout
+        style="@style/mainButton_ll_style">
+
+        <Button
+            style="@style/mainButton_bt_style"
+            android:id="@+id/tv_start_deal"
+            android:text="到达现场" />
+
+        <Button
+            android:id="@+id/bt_more"
+            android:text="•••"
+            style="@style/mainButton_more_style"
+            android:layout_toRightOf="@+id/tv_start_deal"/>
+    </RelativeLayout>
+
+    <View
+        android:visibility="gone"
+        android:id="@+id/v_trans"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_trans"/>
+
+
+</RelativeLayout>

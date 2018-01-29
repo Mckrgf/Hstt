@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/activity_background"
+    android:layout_height="wrap_content">
+
+    <!--工单信息-紧急-->
+    <LinearLayout
+        android:id="@+id/ll_workingTimeLine_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/y60"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/x30"
+        android:paddingRight="@dimen/x30"
+        android:visibility="visible">
+
+        <include layout="@layout/task_info"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x3"
+            android:background="@color/divide_gray" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_workingTimeLine_photos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/y21"
+            android:layout_marginLeft="@dimen/x15"
+            android:layout_marginRight="@dimen/x15"
+            android:layout_marginTop="@dimen/y21" />
+    </LinearLayout>
+</LinearLayout>

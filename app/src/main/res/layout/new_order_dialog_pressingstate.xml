@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x120"
+        android:background="@color/blue_text">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="紧急状态"
+            android:textSize="@dimen/x48"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"/>
+
+        <ImageView
+            android:id="@+id/iv_new_order_dialog_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_close"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/x15"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/x20" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_new_order_dialog_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/y45"
+        android:layout_marginTop="@dimen/y45"
+        android:background="@null">
+        <RadioButton
+            android:id="@+id/rb_very_pressing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawablePadding="@dimen/x45"
+            android:drawableLeft="@drawable/radio_button_operate_type_selector"
+            android:background="@null"
+            android:text="非常紧急"
+            android:textSize="@dimen/new_order_textSize"/>
+        <RadioButton
+            android:id="@+id/rb_pressing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawablePadding="@dimen/x45"
+            android:drawableLeft="@drawable/radio_button_operate_type_selector"
+            android:layout_marginTop="@dimen/new_order_margintTop"
+            android:background="@null"
+            android:textSize="@dimen/new_order_textSize"
+            android:text="紧急"/>
+        <RadioButton
+            android:id="@+id/rb_justlike"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawablePadding="@dimen/x45"
+            android:drawableLeft="@drawable/radio_button_operate_type_selector"
+            android:layout_marginTop="@dimen/new_order_margintTop"
+            android:background="@null"
+            android:textSize="@dimen/new_order_textSize"
+            android:text="一般"/>
+        <RadioButton
+            android:id="@+id/rb_slow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawablePadding="@dimen/x45"
+            android:drawableLeft="@drawable/radio_button_operate_type_selector"
+            android:layout_marginTop="@dimen/new_order_margintTop"
+            android:background="@null"
+            android:textSize="@dimen/new_order_textSize"
+            android:text="缓慢"/>
+    </RadioGroup>
+    <Button
+        android:id="@+id/bt_new_order_dialog_save"
+        android:layout_width="@dimen/x480"
+        android:layout_height="@dimen/y120"
+        android:text="保存"
+        android:textColor="@color/white"
+        android:textSize="@dimen/y45"
+        android:layout_marginTop="@dimen/y60"
+        android:layout_marginBottom="@dimen/new_order_margintTop"
+        android:background="@drawable/ellips_button_selector"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>

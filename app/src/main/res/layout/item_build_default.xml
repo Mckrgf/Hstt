@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_itembuild_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_build_default_style"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/x30">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y120"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingRight="@dimen/x30">
+        <ImageView
+            android:id="@+id/iv_itembuild_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/x30"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_itembuild_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="title"
+            android:textColor="@color/tv_text_black"
+            android:textSize="@dimen/x42" />
+        <TextView
+            android:id="@+id/tv_itembuild_titlecontent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_marginRight="@dimen/x30"
+            android:visibility="gone"
+            android:text="title_content"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/x42"  />
+
+        <ImageView
+            android:id="@+id/iv_itembuild_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/item_jiantou" />
+    </LinearLayout>
+    <View
+        android:id="@+id/v_itembuild_dividling"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x2"
+        android:background="@color/bt_bg_gray"></View>
+</LinearLayout>

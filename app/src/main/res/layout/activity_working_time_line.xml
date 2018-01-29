@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_working_time_line"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_submit"
+    android:fitsSystemWindows="true">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_finalFinishedOrder"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/blue_submit"
+        android:fitsSystemWindows="true"
+        app:navigationIcon="@mipmap/ic_return">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/TimeLine"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x54" />
+
+        <ImageView
+            android:id="@+id/iv_commit_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:padding="@dimen/x45"
+            android:src="@mipmap/task_commit_list" />
+
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tb_finalFinishedOrder"
+        android:background="@color/white">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_workingTimeLine_lists"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y150"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/y45"
+            android:layout_marginLeft="@dimen/x45"
+            android:layout_marginRight="@dimen/x45">
+
+            <RelativeLayout
+                android:id="@+id/rl_deal"
+                android:layout_width="@dimen/x990"
+                android:layout_height="@dimen/y150">
+
+                <Button
+                    android:id="@+id/tv_workTimeLine_start_deal"
+                    style="@style/mainButton_bt_style"
+                    android:text="继续处理" />
+
+                <Button
+                    android:id="@+id/bt_workTimeLine_more"
+                    style="@style/mainButton_more_style"
+                    android:layout_toRightOf="@+id/tv_workTimeLine_start_deal"
+                    android:text="•••" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

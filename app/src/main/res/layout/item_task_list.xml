@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:id="@+id/ll_item_task_list"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="@dimen/x60"
+        android:layout_height="@dimen/y153">
+        <ImageView
+            android:id="@+id/ll_blue_dian"
+            android:layout_width="@dimen/x25"
+            android:layout_height="@dimen/y25"
+            android:src="@drawable/circle_blue"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/tv_person"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/x48"
+                android:textColor="@color/tv_text_black"
+                android:layout_height="wrap_content"
+                android:text="姓名xxx"/>
+            <ImageView
+                android:visibility="gone"
+                android:layout_marginRight="@dimen/x30"
+                android:id="@+id/iv_file_tag"
+                android:padding="@dimen/x30"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/y153"
+                android:src="@drawable/ic_file_tag_yellow"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1px"
+                android:layout_weight="1"/>
+            <ImageView
+                android:layout_marginRight="@dimen/x30"
+                android:id="@+id/iv_call"
+                android:padding="@dimen/x30"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/y153"
+                android:src="@drawable/takephone"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:textSize="@dimen/x42"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:layout_marginRight="@dimen/x102"
+            android:id="@+id/tv_content"
+            android:text="用户地址信息用户地址信息用户地址信息用户地址信息用户地址信息"/>
+
+        <TextView
+            android:lineSpacingExtra="@dimen/y30"
+            android:textSize="@dimen/x42"
+            android:layout_marginTop="@dimen/y30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:layout_marginRight="@dimen/x102"
+            android:id="@+id/tv_content_reason"
+            android:text="用户地址信息用户地址信息用户地址信息用户地址信息用户地址信息"/>
+
+        <View
+            android:layout_marginTop="@dimen/y30"
+            android:layout_marginRight="@dimen/x30"
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@color/divider_color"/>
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y120"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textSize="@dimen/x42"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_task_level"
+                android:text="一级紧急"
+                android:textColor="@color/red"/>
+            <TextView
+                android:textSize="@dimen/x42"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_task_status"
+                android:text="未处理"
+                android:textColor="@color/red"
+                android:layout_marginLeft="@dimen/x20"/>
+
+
+            <TextView
+                android:textSize="@dimen/x42"
+                android:layout_marginRight="@dimen/x15"
+                android:gravity="right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="一分钟前"
+                android:id="@+id/tv_time"/>
+
+            <ImageView
+                android:layout_marginRight="@dimen/x30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/item_jiantou"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_device_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/blue_submit"
+    tools:context="com.example.yb.hstt.UI.Activities.DeviceListActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"/>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/device_list_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_submit">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/build_device"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x54" />
+    </android.support.v7.widget.Toolbar>
+
+    <com.andview.refreshview.XRefreshView
+        android:id="@+id/user_list_header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bt_add_device"
+        android:layout_below="@+id/device_list_toolbar">
+
+        <android.support.v7.widget.RecyclerView
+            android:background="@color/white"
+            android:id="@+id/rc_function"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.andview.refreshview.XRefreshView>
+
+
+
+    <Button
+        android:layout_marginTop="@dimen/y45"
+        android:id="@+id/bt_add_device"
+        android:layout_width="@dimen/x660"
+        android:layout_height="@dimen/y120"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/ellips_button_selector"
+        android:text="添加用户"
+        android:layout_marginBottom="@dimen/y45"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/x42" />
+</RelativeLayout>

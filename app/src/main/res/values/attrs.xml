@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--折线图-->
+    <declare-styleable name="BrokenLineChartView">
+        <attr name="datanums" format="integer"></attr>
+        <attr name="isShade" format="boolean"></attr>
+        <attr name="isGridline" format="boolean"></attr>
+        <attr name="isLeftYvalues" format="boolean"></attr>
+        <attr name="isRightYValues" format="boolean"></attr>
+        <attr name="isCircleUpValues" format="boolean"></attr>
+    </declare-styleable>
+    <!--下拉刷新，上拉加载-->
+    <declare-styleable name="XRefreshView">
+        <attr name="isHeightMatchParent" format="boolean" />
+        <attr name="isWidthMatchParent" format="boolean" />
+        <attr name="autoRefresh" format="boolean" />
+        <attr name="autoLoadMore" format="boolean" />
+    </declare-styleable>
+    <!--九宫格-->
+    <declare-styleable name="PatternView">
+        <attr name="cellwidth" format="dimension"></attr>
+        <attr name="cellspace" format="dimension"></attr>
+        <attr name="cell_strokewidth" format="dimension"></attr>
+        <attr name="cell_fillcolor" format="color"></attr>
+
+        <attr name="errorcolor" format="color"></attr>
+        <attr name="cell_strokecolor" format="color"></attr>
+        <attr name="line_color" format="color"></attr>
+        <attr name="line_strokewidth" format="dimension"></attr>
+
+        <attr name="smallcell_width" format="dimension"></attr>
+        <attr name="smallcell_strokewidth" format="dimension"></attr>
+        <attr name="smallcell_fillcolor" format="color"></attr>
+        <attr name="smallcell_selectedcolor" format="color"></attr>
+    </declare-styleable>
+    <!--密码框-->
+    <declare-styleable name="NumberView">
+        <attr name="pivRectColor" format="color" />
+        <attr name="pivRectWidth" format="dimension" />
+        <attr name="pivRectRadius" format="dimension" />
+
+        <attr name="pivPasswordColor" format="color" />
+        <attr name="pivPasswordRadius" format="dimension" />
+        <attr name="pivPasswordLength" format="integer" />
+
+        <attr name="space" format="dimension"></attr>
+    </declare-styleable>
+    <!--温度盘-->
+    <declare-styleable name="TemperatureView">
+        <attr name="ring_width" format="dimension"></attr>
+        <attr name="ring_height" format="dimension"></attr>
+
+        <attr name="ring_bottomP2_horiz" format="dimension"></attr>
+
+        <attr name="ring_selected_alpha" format="dimension"></attr>
+        <attr name="ring_selected_HSValpha" format="dimension"></attr>
+
+        <attr name="ring_normalcolor" format="color"></attr>
+        <attr name="ring_slectedcolor" format="color"></attr>
+
+        <attr name="ring_shadecolor" format="color"></attr>
+        <attr name="ring_shadewidth" format="dimension"></attr>
+    </declare-styleable>
+    <!--曲线图-->
+    <declare-styleable name="CurveLineChartView">
+        <attr name="curve_color" format="color"></attr>
+        <attr name="is_showXValues" format="boolean"></attr>
+        <attr name="is_showXAxis" format="boolean"></attr>
+        <attr name="is_showBrokenLine" format="boolean"></attr>
+        <attr name="unit" format="string"></attr>
+    </declare-styleable>
+
+    <!--扫描框属性-->
+    <declare-styleable name="innerrect">
+        <attr name="inner_width" format="dimension"/>
+        <attr name="inner_height" format="dimension"/>
+        <attr name="inner_margintop" format="dimension" />
+        <attr name="inner_corner_color" format="color" />
+        <attr name="inner_corner_length" format="dimension" />
+        <attr name="inner_corner_width" format="dimension" />
+        <attr name="inner_scan_bitmap" format="reference" />
+        <attr name="inner_scan_speed" format="integer" />
+        <attr name="inner_scan_iscircle" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="WarpLinearLayout">
+        <attr name="grivate" format="enum"><!--对齐方式 !-->
+            <enum name="right" value="0"></enum>
+            <enum name="left" value="1"></enum>
+            <enum name="center" value="2"></enum>
+        </attr>
+        <attr name="horizontal_Space" format="dimension"></attr>
+        <attr name="vertical_Space" format="dimension"></attr>
+        <attr name="isFull" format="boolean"></attr>
+    </declare-styleable>
+    <declare-styleable name="TreeGroup2">
+        <attr name="cellStrokeWidth" format="dimension"></attr>
+        <attr name="cellVerticalDistance" format="dimension"></attr>
+        <attr name="cellHorizontalDistance" format="dimension"></attr>
+        <attr name="maxWidth" format="dimension"></attr>
+        <attr name="maxHeight" format="dimension"></attr>
+        <attr name="defaultLineColor" format="color"></attr>
+        <attr name="selectedLineColor" format="color"></attr>
+    </declare-styleable>
+
+</resources>

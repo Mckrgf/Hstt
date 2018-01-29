@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_log_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/x48"
+    android:layout_marginLeft="@dimen/x30"
+    android:layout_marginRight="@dimen/x30"
+    android:background="@drawable/function_gray_selector"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="@dimen/x42"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_log_title"
+            android:text="请求内容:"/>
+        <TextView
+            android:textSize="@dimen/x42"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_log_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="@dimen/x42"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请求时间:"/>
+        <TextView
+            android:textSize="@dimen/x42"
+            android:id="@+id/tv_log_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2017.11.11"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/x333"
+    android:layout_height="@dimen/y228"
+    >
+    <LinearLayout
+        android:layout_width="@dimen/x315"
+        android:layout_height="@dimen/y228"
+        android:orientation="vertical"
+        android:layout_alignParentLeft="true"
+        android:padding="1dp">
+
+        <TextView
+            android:id="@+id/tv_navigation_popup_fix"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y105"
+            android:layout_marginTop="@dimen/y18"
+            android:text="报修"
+            android:textSize="@dimen/x36"
+            android:textColor="@color/tv_text_black"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/x30"
+            android:background="@drawable/item_topradius_v_selector"
+            />
+        <!--android:background="@drawable/item_topradius_v_selector"-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x2"
+            android:background="@color/divider_color"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_marginRight="@dimen/x30"></View>
+
+        <TextView
+            android:id="@+id/tv_navigation_popup_updateDevname"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y105"
+            android:text="修改设备名称"
+            android:textSize="@dimen/x36"
+            android:textColor="@color/tv_text_black"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/x30"
+            android:background="@drawable/item_bottomradius_v_selector"
+           />
+        <!--android:background="@drawable/item_bottomradius_v_selector"-->
+    </LinearLayout>
+</RelativeLayout>

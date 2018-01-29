@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:minHeight="@dimen/y816"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y150">
+
+        <TextView
+            android:id="@+id/tv_dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y150"
+            android:background="@color/blue_submit"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x48" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/x25"
+            android:src="@drawable/ic_close" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_margin="@dimen/x20"
+        android:id="@+id/dialog_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择或输入原因" />
+
+        <com.example.yb.hstt.View.WarpLinearLayout
+            android:id="@+id/wll_reason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/x20"
+            app:grivate="left"
+            app:horizontal_Space="@dimen/y30"
+            app:isFull="false"
+            app:vertical_Space="@dimen/y30">
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:layout_marginRight="@dimen/x10"
+                    android:id="@+id/cb_reason_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/half_blue_selector"
+                    android:button="@null"
+                    android:text="无法处理"
+                    android:textColor="@drawable/half_blue_color_selector"/>
+
+                <RadioButton
+                    android:layout_marginRight="@dimen/x10"
+                    android:id="@+id/cb_reason_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/half_blue_selector"
+                    android:button="@null"
+                    android:text="其他人处理"
+                    android:textColor="@drawable/half_blue_color_selector" />
+
+                <RadioButton
+                    android:id="@+id/cb_reason_c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/half_blue_selector"
+                    android:button="@null"
+                    android:text="已完成"
+                    android:textColor="@drawable/half_blue_color_selector" />
+            </RadioGroup>
+
+
+
+
+        </com.example.yb.hstt.View.WarpLinearLayout>
+
+        <EditText
+            android:padding="@dimen/x15"
+            android:gravity="top"
+            android:id="@+id/et_reason"
+            android:layout_marginTop="@dimen/x10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minLines="3"
+            android:background="@drawable/edittext_black_stroke"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/bt_confirm"
+                android:layout_width="@dimen/x380"
+                android:layout_height="@dimen/y120"
+                android:layout_marginBottom="@dimen/y45"
+                android:layout_marginTop="@dimen/y45"
+                android:background="@drawable/ellips_button_selector"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x42" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/bt_cnacel"
+                android:layout_width="@dimen/x380"
+                android:layout_height="@dimen/y120"
+                android:layout_marginBottom="@dimen/y45"
+                android:layout_marginTop="@dimen/y45"
+                android:layout_toRightOf="@+id/bt_confirm"
+                android:background="@drawable/ellips_button_selector"
+                android:text="取消"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x42" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

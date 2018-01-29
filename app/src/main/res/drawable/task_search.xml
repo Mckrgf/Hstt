@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--工单列表界面搜索栏效果shape-->
+    <corners android:radius="@dimen/x20"/>
+    <solid android:color="@color/white"/>
+    <padding android:bottom="@dimen/x10"/>
+    <padding android:top="@dimen/x10"/>
+    <padding android:left="@dimen/x10"/>
+    <padding android:right="@dimen/x10"/>
+</shape>

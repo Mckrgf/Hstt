@@ -1,0 +1,114 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/blue_submit</item>
+        <item name="colorPrimaryDark">@color/blue_submit</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="LaunchTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <!-- dialog样式 -->
+    <style name="dialog_custom" parent="@android:style/Theme.Dialog">
+        <item name="android:windowIsFloating">true</item>    <!--是否浮在界面上-->
+        <item name="android:windowIsTranslucent">true</item> <!--是否半透明-->
+        <item name="android:windowNoTitle">false</item>       <!--是否有标题-->
+        <item name="android:windowBackground">@android:color/transparent</item> <!--窗口背景色透明-->
+        <item name="android:backgroundDimEnabled">true</item> <!--背景是否模糊显示-->
+    </style>
+
+    <!-- 自定义CheckBox和RadioButton中文字和图片之间距离  -->
+    <style name="package_radio_style">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:button">@null</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:drawableLeft">@drawable/radio_button_operate_type_selector</item>
+        <item name="android:drawablePadding">10dp</item>
+
+    </style>
+    <!--pop动画-->
+    <style name="popWindow_animation">
+        <item name="android:windowEnterAnimation">@anim/popupwindow_enter</item>
+        <item name="android:windowExitAnimation">@anim/popupwindow_exit</item>
+    </style>
+    <!--自动换行布局样式-->
+    <style name="WarpLinearLayoutDefault">
+        <item name="grivate">left</item>
+        <item name="horizontal_Space">20dp</item>
+        <item name="vertical_Space">20dp</item>
+        <item name="isFull">false</item>
+    </style>
+    <!--相机主题-->
+    <style name="CameraTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">#ffffff</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/black</item>
+    </style>
+    <!--录像页面右边按钮-->
+    <style name="TitleStyleRight">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">50dip</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">17.0sp</item>
+    </style>
+    <!--录像页面中间按钮-->
+    <style name="TitleStyleCenter">
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:layout_marginRight">4dp</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:gravity">center</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">1.0</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">20.0sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--app主要按钮区_“外层”布局样式-->
+    <style name="mainButton_ll_style">
+        <item name="android:layout_width">@dimen/x990</item>
+        <item name="android:layout_height">@dimen/y150</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginBottom">@dimen/y45</item>
+    </style>
+    <!--app主要按钮区_“按钮”布局样式-->
+    <style name="mainButton_bt_style">
+        <item name="android:layout_width">@dimen/x840</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/ellips_half_left</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <!--app主要按钮区_“更多”布局样式-->
+    <style name="mainButton_more_style">
+        <item name="android:layout_width">@dimen/x150</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/ellips_half_right</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!--app主要按钮区_“按钮”布局样式,没有更多按钮-->
+    <style name="mainButton_bt_style_no_more">
+        <item name="android:layout_width">@dimen/x840</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/ellips_button_gray_selector</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+</resources>

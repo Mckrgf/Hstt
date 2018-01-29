@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sfl_limit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/ll_popupwindow_basemenu_deal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_below="@+id/task_status_first_toolbar"
+                android:id="@+id/ll_title_pop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y150"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginRight="@dimen/x20"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="工单信息"
+                    android:textColor="@color/tv_text_black"
+                    android:textSize="@dimen/x48"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_last_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="剩余时间:"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/x36" />
+
+                <TextView
+                    android:id="@+id/tv_left_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x15"
+                    android:text="00:00:00"
+                    android:textColor="@color/blue_submit"
+                    android:textSize="@dimen/x42" />
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:visibility="gone"
+                android:id="@+id/task_status_first_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blue_submit">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="我的工单"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/x54" />
+
+            </android.support.v7.widget.Toolbar>
+
+            <LinearLayout
+                android:id="@+id/rl_need_to_hide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_title_pop"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/divide_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="@dimen/y10"
+                    android:background="@color/divider_color" />
+
+                <include layout="@layout/task_info"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_info_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/divide_c"
+                    android:layout_marginBottom="@dimen/y20"
+                    android:layout_marginLeft="@dimen/x45"
+                    android:layout_marginRight="@dimen/x45"
+                    android:layout_marginTop="@dimen/y21" />
+
+                <View
+                    android:id="@+id/view_kong"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_deal"
+                    style="@style/mainButton_ll_style">
+
+                    <Button
+                        android:id="@+id/tv_start_deal"
+                        style="@style/mainButton_bt_style"
+                        android:text="@string/start_deal"/>
+
+                    <Button
+                        android:id="@+id/bt_more"
+                        style="@style/mainButton_more_style"
+                        android:layout_toRightOf="@+id/tv_start_deal"
+                        android:text="•••" />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>

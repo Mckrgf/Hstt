@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="12dip"
+        android:layout_marginLeft="10dp"
+        android:text="load!"
+        android:textColor="@color/black" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y21"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/message"
+        android:layout_marginBottom="1dip"
+        android:layout_marginTop="12dip"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:progressDrawable="@drawable/download_progress_pb_selector"/>
+
+    <TextView
+        android:id="@+id/progress_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/progress"
+        android:layout_marginLeft="10dp"
+        android:paddingBottom="12dip"
+        android:textColor="@color/black"
+        android:text="---"/>
+
+    <TextView
+        android:id="@+id/progress_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/progress"
+        android:paddingBottom="12dip"
+        android:paddingRight="10dp"
+        android:textColor="@color/black"
+        android:text="---"/>
+</RelativeLayout>
